@@ -1,0 +1,17 @@
+steps: 
+
+- name: 'gcr.io/cloud-builders/docker'
+  entrypoint: 'bash'
+  args: 
+  - '-c'
+  - |
+    echo "build docker image"
+    docker build -t us-central1-docker.pkg.dev/mrkl-gcp-sandbox/container-images/sandbox:pubsub-2-cl .
+#push the image to the container registry
+- name: 'gcr.io/cloud-builders/docker'
+  entrypoint: 'bash'
+  args:
+  - '-c'
+  - |
+    echo "push image to the repo"
+    docker push us-central1-docker.pkg.dev/mrkl-gcp-sandbox/container-images/sandbox:pubsub-2-cl
