@@ -15,8 +15,8 @@ logger = logging_client.logger(log_name)
 count = 1
 def publish(message, retryCount):
     #Configuration
-    project_id = "prj-dfobservability-s-14af"
-    topic_id = "recoverable-errors"
+    project_id = ""
+    topic_id = ""
 
     timestamp = str(int(time.time()))
 
@@ -47,8 +47,8 @@ def publish(message, retryCount):
 
 def stream(request):
     # TODO(developer)
-    project_id = "prj-dfobservability-s-14af"
-    subscription_id = "cloudrunretryutility"
+    project_id = ""
+    subscription_id = ""
     # Number of seconds the subscriber should listen for messages
     timeout = 5.0
     subscriber = pubsub_v1.SubscriberClient()
