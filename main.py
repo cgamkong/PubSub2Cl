@@ -45,7 +45,7 @@ def publish(message, retryCount):
         retryCount += 1
         publish(message, retryCount)
 
-def stream(request):
+def stream():
     # TODO(developer)
     project_id = "mrkl-gcp-sandbox"
     subscription_id = "cloudrun-tmp-sub"
