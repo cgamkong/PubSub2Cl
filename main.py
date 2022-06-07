@@ -15,8 +15,8 @@ logger = logging_client.logger(log_name)
 count = 1
 def publish(message, retryCount):
     #Configuration
-    project_id = ""
-    topic_id = ""
+    project_id = "mrkl-gcp-sandbox"
+    topic_id = "cloudrun-tst"
 
     timestamp = str(int(time.time()))
 
@@ -47,8 +47,8 @@ def publish(message, retryCount):
 
 def stream(request):
     # TODO(developer)
-    project_id = ""
-    subscription_id = ""
+    project_id = "mrkl-gcp-sandbox"
+    subscription_id = "cloudrun-tmp-sub"
     # Number of seconds the subscriber should listen for messages
     timeout = 5.0
     subscriber = pubsub_v1.SubscriberClient()
