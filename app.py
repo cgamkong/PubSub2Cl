@@ -11,8 +11,8 @@ app = Flask(__name__)
 
 
 @app.route("/")
-def home():
-    return main.stream()
+def home(request):
+    return main.stream(request)
 
 if __name__ == '__main__':
     import os
